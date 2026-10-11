@@ -1,5 +1,5 @@
 body {
-    margin: 0 5%;
+    margin: 0 auto;
     max-width: 1280px;
     padding: 0;
 }
@@ -11,16 +11,42 @@ body {
 .col-2,
 .col-3 {
     grid-template-columns: 1fr;
-    gap: 1em;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    gap: 1em;   
+}
+
+header{
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
 }
 
 main{
+    color: white;
     margin: 16px;
     background-color: #262626;
     padding: 16px;
     border: 9px solid blue;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
+.leftimg{
+    display: block;
+}
+.rightimg{
+    display: none;
+}
 footer{
     border: 3px solid;
     padding: 16px;
@@ -32,6 +58,12 @@ iframe{
 }
 
 @media screen and (min-width:48em) {
+    .leftimg{
+        display: none;
+    }
+    .rightimg{
+        display: block;
+    }
     .col-2{
         grid-template-columns: 1fr 1fr;
     }
